@@ -94,13 +94,13 @@ object DecisionTree {
     println(s"total test count: $totalTestCount")
     results.foreach(_.printConsole())
 
-    val avgPrecision = results.map(_.precision()).sum/10
+    val avgPrecision = results.map(_.precision()).sum/totalTestCount
     println(s"Average Precision $avgPrecision")
 
-    val avgRecall = results.map(_.recall()).sum/10
+    val avgRecall = results.map(_.recall()).sum/totalTestCount
     println(s"Average Recall $avgRecall")
 
-    val avgErrorRate = results.map(_.errorRate()).sum/10
+    val avgErrorRate = results.map(_.errorRate()).sum/totalTestCount
     println(s"Average Error Rate $avgErrorRate")
 
   }
